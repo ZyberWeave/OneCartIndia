@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255; /* White */
+    --foreground: 46 46 46; /* Charcoal */
+    --card: 255 255 255; /* White */
+    --card-foreground: 46 46 46; /* Charcoal */
+    --popover: 255 255 255; /* White */
+    --popover-foreground: 46 46 46; /* Charcoal */
+    --primary: 255 153 51; /* Saffron */
+    --primary-foreground: 255 255 255; /* White */
+    --secondary: 26 115 232; /* Blue */
+    --secondary-foreground: 255 255 255; /* White */
+    --accent: 15 76 129; /* Dark Blue */
+    --accent-foreground: 255 255 255; /* White */
+    --muted: 249 250 251; /* Very light gray */
+    --muted-foreground: 107 114 128; /* Medium gray */
+    --destructive: 239 68 68; /* Red */
+    --destructive-foreground: 255 255 255; /* White */
+    --border: 229 231 235; /* Light Gray */
+    --input: 229 231 235; /* Light Gray */
+    --ring: 255 153 51; /* Saffron */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 46 46 46; /* Charcoal */
+    --foreground: 255 255 255; /* White */
+    --card: 46 46 46; /* Charcoal */
+    --card-foreground: 255 255 255; /* White */
+    --popover: 46 46 46; /* Charcoal */
+    --popover-foreground: 255 255 255; /* White */
+    --primary: 255 153 51; /* Saffron */
+    --primary-foreground: 255 255 255; /* White */
+    --secondary: 26 115 232; /* Blue */
+    --secondary-foreground: 255 255 255; /* White */
+    --accent: 15 76 129; /* Dark Blue */
+    --accent-foreground: 255 255 255; /* White */
+    --muted: 55 65 81; /* Dark gray */
+    --muted-foreground: 156 163 175; /* Light gray */
+    --destructive: 239 68 68; /* Red */
+    --destructive-foreground: 255 255 255; /* White */
+    --border: 75 85 99; /* Dark border */
+    --input: 75 85 99; /* Dark border */
+    --ring: 255 153 51; /* Saffron */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: #f9fafb !important;
+  }
+}
+
+/* Force white backgrounds for cards and sections */
+.product-section,
+.deal-section,
+.card-content {
+  background-color: #ffffff !important;
+}
+
+/* Ensure no yellow backgrounds anywhere */
+* {
+  background-color: inherit;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Custom utility classes for the color palette */
+@layer utilities {
+  .text-saffron {
+    color: #ff9933 !important;
+  }
+
+  .bg-saffron {
+    background-color: #ff9933 !important;
+  }
+
+  .border-saffron {
+    border-color: #ff9933 !important;
+  }
+
+  .text-blue-primary {
+    color: #1a73e8 !important;
+  }
+
+  .bg-blue-primary {
+    background-color: #1a73e8 !important;
+  }
+
+  .border-blue-primary {
+    border-color: #1a73e8 !important;
+  }
+
+  .text-dark-blue {
+    color: #0f4c81 !important;
+  }
+
+  .bg-dark-blue {
+    background-color: #0f4c81 !important;
+  }
+
+  .border-dark-blue {
+    border-color: #0f4c81 !important;
+  }
+
+  .text-charcoal {
+    color: #2e2e2e !important;
+  }
+
+  .bg-charcoal {
+    background-color: #2e2e2e !important;
+  }
+
+  .border-light-gray {
+    border-color: #e5e7eb !important;
+  }
+
+  .bg-light-gray {
+    background-color: #f9fafb !important;
+  }
+}
